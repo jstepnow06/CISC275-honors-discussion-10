@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Streamlined File Explorer</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="app-shell">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Workspace</p>
+                    <h1>Explorer</h1>
+                </div>
+                <div class="search-chip" aria-label="Search placeholder">
+                    Search files, tags, or comments
+                </div>
+            </header>
+
+            <main class="layout">
+                <section class="browser-panel" aria-label="File browser">
+                    <section class="content-row">
+                        <div class="section-heading">
+                            <h2>Pins</h2>
+                            <span>Quick access</span>
+                        </div>
+                        <div class="file-grid" id="pins"></div>
+                    </section>
+
+                    <section class="content-row">
+                        <div class="section-heading">
+                            <h2>Recents</h2>
+                            <span>Recently opened</span>
+                        </div>
+                        <div class="file-grid" id="recents"></div>
+                    </section>
+                </section>
+
+                <aside class="details-panel" aria-label="File details sidebar">
+                    <div class="sidebar-card">
+                        <p class="eyebrow">Selected item</p>
+                        <h2 id="selected-name">Design-Brief.pdf</h2>
+                        <p id="selected-meta">PDF · Updated 2h ago</p>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <label class="field-label" for="rename">Rename</label>
+                        <input id="rename" type="text" />
+                    </div>
+
+                    <div class="sidebar-card">
+                        <label class="field-label" for="comments">Comments</label>
+                        <textarea id="comments" rows="5"></textarea>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <label class="field-label" for="tag-input">Tags</label>
+                        <div class="tag-list" id="selected-tags"></div>
+                        <input id="tag-input" type="text" placeholder="Add tags, comma separated" />
+                    </div>
+                </aside>
+            </main>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
